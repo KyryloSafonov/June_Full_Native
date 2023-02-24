@@ -14,6 +14,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {Routes} from './routes';
 import {Home} from './screens/Home';
 import {Posts} from './screens/Posts';
+import {MainTab} from './screens/tabs/MainTab';
 
 const Stack = createNativeStackNavigator();
 const App = () => {
@@ -40,6 +41,11 @@ const App = () => {
           name={Routes.Posts}
           component={Posts}
           options={{title: 'Posts Page'}}
+        />
+        <Stack.Screen
+          name={Routes.MainTabs}
+          component={MainTab}
+          options={{title: 'Main tab'}}
         />
       </Stack.Navigator>
     </NavigationContainer>
